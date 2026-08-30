@@ -1,12 +1,909 @@
 /* =========================================================
-   PROJECT PAGE — LARGE TABLETS / SMALL LAPTOPS
+   HOME PAGE — LARGE TABLETS / SMALL LAPTOPS
    ========================================================= */
 
 @media screen and (max-width: 1200px) {
 
-    /* -----------------------------------------------------
-       PROJECT HERO
-       ----------------------------------------------------- */
+    .site-header {
+        padding: 1.5rem 4rem;
+    }
+
+    .navbar {
+        min-height: 115px;
+    }
+
+    .nav-links {
+        gap: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+    }
+
+    .nav-status {
+        display: none;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 650px;
+        padding: 5rem 4rem 7rem;
+    }
+
+    .hero-title {
+        font-size: clamp(5rem, 12vw, 9rem);
+    }
+
+    .title-offset {
+        margin-left: 7vw;
+    }
+
+    .hero-shape {
+        width: 230px;
+        height: 230px;
+        right: 4%;
+    }
+
+    .hero-shape::before {
+        width: 200px;
+        height: 200px;
+    }
+
+    .floating-note {
+        font-size: 0.52rem;
+    }
+
+    .note-one {
+        right: 5%;
+    }
+
+    .note-two {
+        left: 4%;
+    }
+
+    .hero-content::after {
+        width: 85px;
+        height: 85px;
+        right: 4%;
+        font-size: 0.4rem;
+    }
+
+    /* INTRO */
+
+    .intro-strip {
+        width: 90%;
+        padding: 6rem 0;
+    }
+
+    .strip-content h2 {
+        font-size: clamp(2.8rem, 5.5vw, 5rem);
+    }
+
+    /* GRID */
+
+    .home-grid {
+        width: 90%;
+        padding: 6rem 0;
+    }
+
+    .orbit-card {
+        min-height: 300px;
+    }
+
+    .orbit-card h3 {
+        font-size: clamp(2.2rem, 4vw, 4rem);
+    }
+
+    /* MORE THAN THIS */
+
+    .more-than-this {
+        width: 90%;
+        margin: 3rem auto;
+        padding: 7rem 6vw;
+    }
+
+    .more-content {
+        max-width: 70%;
+    }
+
+    .more-content h2 {
+        font-size: clamp(4rem, 9vw, 8rem);
+    }
+
+    .more-sticker {
+        right: 5%;
+        width: 135px;
+        height: 135px;
+    }
+
+    /* CONNECT */
+
+    .connect-section {
+        width: 90%;
+        padding: 8rem 0;
+    }
+
+    .connect-section h2 {
+        font-size: clamp(4rem, 9vw, 8rem);
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 3rem 5vw 2rem;
+    }
+}
+
+
+/* =========================================================
+   HOME PAGE — TABLET
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    /* HEADER */
+
+    .site-header {
+        padding: 1.25rem 2rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 70px;
+        width: 100%;
+    }
+
+    .mobile-navbar .logo {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+        min-height: auto;
+        padding: 5rem 2rem 6rem;
+    }
+
+    .hero-title {
+        font-size: clamp(4.8rem, 14vw, 8rem);
+        line-height: 0.82;
+    }
+
+    .title-offset {
+        margin-left: 5vw;
+    }
+
+    .hero-bottom {
+        max-width: 100%;
+        margin-top: 4rem;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .hero-description {
+        max-width: 32rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .funky-link {
+        flex: 0 1 220px;
+    }
+
+    .floating-note {
+        display: none;
+    }
+
+    .hero-shape {
+        width: 220px;
+        height: 220px;
+        right: -30px;
+        bottom: 20px;
+        opacity: 0.1;
+    }
+
+    .hero-shape::before {
+        width: 190px;
+        height: 190px;
+    }
+
+    .hero-content::after {
+        display: none;
+    }
+
+    .scribble-one {
+        right: 8%;
+        top: 12%;
+    }
+
+    .scribble-two {
+        left: 4%;
+        bottom: 8%;
+    }
+
+    /* INTRO */
+
+    .intro-strip {
+        width: 88%;
+        padding: 5rem 0;
+
+        grid-template-columns:
+            55px
+            minmax(0, 1fr)
+            60px;
+
+        gap: 1.5rem;
+    }
+
+    .strip-content h2 {
+        font-size: clamp(2.6rem, 7vw, 4.5rem);
+    }
+
+    .strip-content > p {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    /* GRID */
+
+    .home-grid {
+        width: 88%;
+        padding: 5rem 0;
+        gap: 1rem;
+    }
+
+    .grid-heading {
+        grid-column: span 2;
+        padding-bottom: 2.5rem;
+    }
+
+    .grid-heading h2 {
+        font-size: clamp(4rem, 10vw, 7rem);
+    }
+
+    .orbit-card {
+        min-height: 270px;
+        padding: 1.5rem;
+    }
+
+    .orbit-card h3 {
+        left: 1.5rem;
+        bottom: 1.5rem;
+        font-size: clamp(2.1rem, 5vw, 3.8rem);
+    }
+
+    .card-arrow {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .grid-note {
+        min-height: 220px;
+        padding: 1.5rem;
+    }
+
+    /* MORE THAN THIS */
+
+    .more-than-this {
+        width: 88%;
+        margin: 2.5rem auto;
+        padding: 6rem 5vw;
+    }
+
+    .more-content {
+        max-width: 72%;
+    }
+
+    .more-content h2 {
+        font-size: clamp(4rem, 10vw, 7rem);
+    }
+
+    .more-sticker {
+        right: 3%;
+        bottom: 8%;
+        width: 120px;
+        height: 120px;
+    }
+
+    .more-decoration {
+        right: 8%;
+    }
+
+    /* CONNECT */
+
+    .connect-section {
+        width: 88%;
+        padding: 6rem 0;
+    }
+
+    .connect-section h2 {
+        font-size: clamp(4rem, 10vw, 7rem);
+        margin: 3rem 0 4rem;
+    }
+
+    .connect-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .connect-links a:nth-child(2) {
+        border-right: none;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 3rem 2rem 2rem;
+    }
+}
+
+
+/* =========================================================
+   HOME PAGE — MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+
+    .site-header {
+        width: 100%;
+        padding: 1rem 1.25rem;
+    }
+
+    .mobile-navbar {
+        width: 100%;
+        min-height: 60px;
+    }
+
+    .mobile-navbar .logo {
+        width: 48px;
+        height: 48px;
+        font-size: 1rem;
+    }
+
+    .hamburger {
+        width: 42px;
+        height: 42px;
+    }
+
+    .mobile-menu {
+        top: 68px;
+        right: 0;
+        width: min(250px, calc(100vw - 2.5rem));
+        z-index: 200;
+    }
+
+    .mobile-menu a {
+        padding: 0.9rem;
+        font-size: 0.65rem;
+    }
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+        min-height: auto;
+        padding: 4rem 1.25rem 5rem;
+    }
+
+    .hero-intro {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .eyebrow {
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+    }
+
+    .year {
+        font-size: 0.55rem;
+    }
+
+    .hero-title {
+        width: 100%;
+        margin-top: 2.5rem;
+
+        font-size:
+            clamp(
+                3.5rem,
+                17vw,
+                6rem
+            );
+
+        line-height: 0.84;
+        letter-spacing: -0.07em;
+    }
+
+    .title-line {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .title-offset {
+        margin-left: 3vw;
+    }
+
+    .title-line:first-child::after {
+        width: 1.8em;
+    }
+
+    .hero-bottom {
+        margin-top: 3rem;
+        gap: 2rem;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 100%;
+        font-size: 0.88rem;
+        line-height: 1.75;
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .funky-link {
+        width: 100%;
+        min-width: 0;
+        padding: 1rem;
+    }
+
+    .hero-shape {
+        display: none;
+    }
+
+    .hero-content::after {
+        display: none;
+    }
+
+    .floating-note {
+        display: none;
+    }
+
+    .scribble {
+        font-size: 2rem;
+    }
+
+    .scribble-one {
+        top: 10%;
+        right: 8%;
+    }
+
+    .scribble-two {
+        bottom: 8%;
+        left: 5%;
+    }
+
+    /* INTRO */
+
+    .intro-strip {
+        width: calc(100% - 2.5rem);
+
+        padding: 4.5rem 0;
+
+        display: grid;
+
+        grid-template-columns:
+            38px
+            minmax(0, 1fr);
+
+        gap: 1rem;
+    }
+
+    .intro-strip::before {
+        left: 0;
+        right: 0;
+    }
+
+    .strip-number {
+        font-size: 0.65rem;
+    }
+
+    .strip-number::after {
+        margin-top: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .strip-content {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .strip-label {
+        margin-bottom: 1rem;
+    }
+
+    .strip-content h2 {
+        margin-bottom: 1.5rem;
+
+        font-size:
+            clamp(
+                2.2rem,
+                9vw,
+                3.6rem
+            );
+
+        line-height: 0.95;
+    }
+
+    .strip-content > p {
+        width: 100%;
+        font-size: 0.85rem;
+        line-height: 1.75;
+    }
+
+    .round-arrow {
+        grid-column: 2;
+
+        width: 52px;
+        height: 52px;
+
+        margin-top: 0.5rem;
+    }
+
+    /* GRID */
+
+    .home-grid {
+        width: calc(100% - 2.5rem);
+
+        padding: 4.5rem 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+    }
+
+    .grid-heading {
+        grid-column: auto;
+        padding: 1rem 0 2.5rem;
+    }
+
+    .grid-heading h2 {
+        margin-top: 1.2rem;
+
+        font-size:
+            clamp(
+                3.5rem,
+                15vw,
+                5.5rem
+            );
+
+        line-height: 0.85;
+    }
+
+    .grid-heading::before {
+        right: 0;
+        top: 0;
+    }
+
+    .grid-heading h2::after {
+        right: 4%;
+    }
+
+    .orbit-card {
+        width: 100%;
+        min-height: 240px;
+
+        padding: 1.5rem;
+
+        transform: none !important;
+    }
+
+    .orbit-card:hover {
+        transform: translateY(-6px) !important;
+    }
+
+    .orbit-card h3 {
+        left: 1.5rem;
+        bottom: 1.5rem;
+
+        font-size:
+            clamp(
+                2rem,
+                9vw,
+                3.3rem
+            );
+    }
+
+    .card-arrow {
+        top: 1.25rem;
+        right: 1.25rem;
+
+        width: 42px;
+        height: 42px;
+    }
+
+    .grid-note {
+        width: 100%;
+        min-height: 170px;
+
+        padding: 1.5rem;
+
+        transform: rotate(0.8deg);
+    }
+
+    .grid-note p {
+        max-width: 100%;
+    }
+
+    /* MORE THAN THIS */
+
+    .more-than-this {
+        width: calc(100% - 2.5rem);
+
+        margin:
+            2rem auto
+            3rem;
+
+        padding:
+            4.5rem
+            1.5rem
+            5rem;
+
+        border-left-width: 5px;
+
+        box-shadow:
+            7px 7px 0 var(--ink);
+    }
+
+    .more-than-this::before {
+        top: 1.5rem;
+        left: 1.5rem;
+
+        letter-spacing: 0.3rem;
+    }
+
+    .more-than-this::after {
+        top: 1.5rem;
+        right: 0.5rem;
+    }
+
+    .more-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .more-content h2 {
+        margin-top: 1.5rem;
+
+        font-size:
+            clamp(
+                3.3rem,
+                15vw,
+                5.5rem
+            );
+
+        line-height: 0.86;
+    }
+
+    .more-content p {
+        max-width: 100%;
+
+        margin: 2rem 0;
+
+        font-size: 0.88rem;
+        line-height: 1.75;
+    }
+
+    .more-button {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 1rem;
+
+        font-size: 0.62rem;
+    }
+
+    .more-button::after {
+        display: none;
+    }
+
+    .more-decoration {
+        top: 5%;
+        right: 10%;
+        font-size: 3rem;
+    }
+
+    .more-sticker {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        width: 110px;
+        height: 110px;
+
+        margin: 3rem auto 0;
+
+        transform: rotate(6deg);
+
+        animation: none;
+    }
+
+    .more-sticker span {
+        font-size: 0.5rem;
+    }
+
+    /* CONNECT */
+
+    .connect-section {
+        width: calc(100% - 2.5rem);
+
+        padding: 5rem 0;
+    }
+
+    .connect-top {
+        font-size: 0.5rem;
+    }
+
+    .connect-section h2 {
+        margin:
+            2.5rem 0
+            3rem;
+
+        font-size:
+            clamp(
+                3.3rem,
+                15vw,
+                5.5rem
+            );
+
+        line-height: 0.87;
+    }
+
+    .connect-links {
+        grid-template-columns: 1fr;
+    }
+
+    .connect-links a {
+        padding: 1.15rem 0;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--line);
+    }
+
+    .connect-links a:last-child {
+        border-bottom: none;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+        margin-top: 2rem;
+
+        padding:
+            2.5rem
+            1.25rem
+            1.5rem;
+    }
+
+    .footer-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1.25rem;
+    }
+
+    .footer-top p {
+        max-width: 20rem;
+
+        font-size: 0.75rem;
+        line-height: 1.6;
+    }
+
+    .footer-top > span {
+        font-size: 0.65rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0.7rem;
+
+        margin-top: 2rem;
+
+        font-size: 0.65rem;
+    }
+}
+
+
+/* =========================================================
+   HOME PAGE — VERY SMALL PHONES
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .site-header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-title {
+        font-size: 3.35rem;
+    }
+
+    .intro-strip,
+    .home-grid,
+    .connect-section {
+        width: calc(100% - 2rem);
+    }
+
+    .strip-content h2 {
+        font-size: 2.15rem;
+    }
+
+    .grid-heading h2 {
+        font-size: 3.25rem;
+    }
+
+    .orbit-card {
+        min-height: 220px;
+    }
+
+    .orbit-card h3 {
+        font-size: 2rem;
+    }
+
+    .more-than-this {
+        width: calc(100% - 2rem);
+
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .more-content h2 {
+        font-size: 3.25rem;
+    }
+
+    .connect-section h2 {
+        font-size: 3.25rem;
+    }
+}
+
+
+/* =========================================================
+   PROJECT PAGE — LARGE TABLETS / SMALL LAPTOPS
+   ========================================================= */
+
+@media screen and (max-width: 1200px) {
 
     .projects-page .projects-hero {
         width: 90% !important;
@@ -35,11 +932,6 @@
         height: 145px;
     }
 
-
-    /* -----------------------------------------------------
-       PROJECT INTRO
-       ----------------------------------------------------- */
-
     .projects-page .projects-intro-section {
         width: 90% !important;
 
@@ -51,11 +943,6 @@
 
         padding: 7rem 0 !important;
     }
-
-
-    /* -----------------------------------------------------
-       PROJECT FEATURES
-       ----------------------------------------------------- */
 
     .projects-page .project-feature {
         width: 90% !important;
@@ -88,14 +975,8 @@
             );
     }
 
-
-    /* -----------------------------------------------------
-       CLOSING
-       ----------------------------------------------------- */
-
     .projects-page .projects-closing {
         width: 90% !important;
-
         padding: 7rem 0 !important;
     }
 
@@ -116,10 +997,6 @@
 
 @media screen and (max-width: 900px) {
 
-    /* -----------------------------------------------------
-       HEADER
-       ----------------------------------------------------- */
-
     .projects-page .about-header {
         width: 90%;
 
@@ -130,11 +1007,6 @@
     .projects-page .about-navigation {
         display: none;
     }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
 
     .projects-page .projects-hero {
         width: 90% !important;
@@ -172,11 +1044,6 @@
         font-size: 1rem !important;
     }
 
-
-    /* -----------------------------------------------------
-       INTRO
-       ----------------------------------------------------- */
-
     .projects-page .projects-intro-section {
         width: 90% !important;
 
@@ -197,11 +1064,6 @@
                 6.5rem
             );
     }
-
-
-    /* -----------------------------------------------------
-       PROJECT FEATURES
-       ----------------------------------------------------- */
 
     .projects-page .project-feature {
         width: 90% !important;
@@ -228,19 +1090,11 @@
             );
     }
 
-
-    /* -----------------------------------------------------
-       COLORFUL PROJECT CARDS
-       ----------------------------------------------------- */
-
     .projects-page .project-rimorse .project-main,
     .projects-page .project-breath .project-main,
     .projects-page .project-ticktask .project-main {
         padding: 2.5rem;
     }
-
-
-    /* Keep the decorative words subtle */
 
     .projects-page .project-rimorse .project-main::after,
     .projects-page .project-breath .project-main::after,
@@ -248,27 +1102,15 @@
         opacity: 0.25;
     }
 
-
-    /* -----------------------------------------------------
-       PROJECT DESCRIPTION
-       ----------------------------------------------------- */
-
     .projects-page .project-description {
         max-width: 100%;
-
         margin-top: 2.5rem;
     }
 
     .projects-page .project-description p {
         font-size: 1rem !important;
-
         line-height: 1.8 !important;
     }
-
-
-    /* -----------------------------------------------------
-       HIGHLIGHT
-       ----------------------------------------------------- */
 
     .projects-page .project-highlight {
         width: 100%;
@@ -277,11 +1119,6 @@
             130px
             minmax(0, 1fr);
     }
-
-
-    /* -----------------------------------------------------
-       CLOSING
-       ----------------------------------------------------- */
 
     .projects-page .projects-closing {
         width: 90% !important;
@@ -299,10 +1136,6 @@
 
 @media screen and (max-width: 600px) {
 
-    /* -----------------------------------------------------
-       PAGE
-       ----------------------------------------------------- */
-
     .projects-page {
         overflow-x: hidden;
     }
@@ -311,10 +1144,7 @@
         inset: 7px;
     }
 
-
-    /* -----------------------------------------------------
-       HEADER
-       ----------------------------------------------------- */
+    /* HEADER */
 
     .projects-page .about-header {
         width: 88%;
@@ -336,10 +1166,7 @@
         display: none;
     }
 
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
+    /* HERO */
 
     .projects-page .projects-hero {
         width: 88% !important;
@@ -361,7 +1188,6 @@
 
     .projects-page .projects-eyebrow {
         font-size: 0.62rem !important;
-
         letter-spacing: 0.12em;
     }
 
@@ -374,7 +1200,6 @@
             );
 
         line-height: 0.83;
-
         letter-spacing: -0.075em;
     }
 
@@ -384,14 +1209,10 @@
         margin-top: 2.8rem;
 
         font-size: 0.95rem !important;
-
         line-height: 1.75 !important;
     }
 
-
-    /* -----------------------------------------------------
-       INTRO SECTION
-       ----------------------------------------------------- */
+    /* INTRO */
 
     .projects-page .projects-intro-section {
         width: 88% !important;
@@ -431,14 +1252,10 @@
 
     .projects-page .projects-intro-content > p:not(.projects-kicker) {
         font-size: 0.92rem;
-
         line-height: 1.8;
     }
 
-
-    /* -----------------------------------------------------
-       PROJECT FEATURE
-       ----------------------------------------------------- */
+    /* PROJECT FEATURE */
 
     .projects-page .project-feature {
         width: 88% !important;
@@ -448,9 +1265,6 @@
         padding:
             5rem 0 !important;
     }
-
-
-    /* Project number becomes horizontal */
 
     .projects-page .project-number {
         margin-bottom: 2.5rem;
@@ -474,10 +1288,7 @@
         font-size: 0.58rem;
     }
 
-
-    /* -----------------------------------------------------
-       COLORFUL CARDS
-       ----------------------------------------------------- */
+    /* COLORFUL CARDS */
 
     .projects-page .project-rimorse .project-main,
     .projects-page .project-breath .project-main,
@@ -486,9 +1297,6 @@
 
         transform: none;
     }
-
-
-    /* Slightly different mobile card shapes */
 
     .projects-page .project-rimorse .project-main {
         background:
@@ -517,10 +1325,7 @@
             );
     }
 
-
-    /* -----------------------------------------------------
-       PROJECT TITLES
-       ----------------------------------------------------- */
+    /* PROJECT TITLES */
 
     .projects-page .project-heading h2 {
         font-size:
@@ -535,20 +1340,15 @@
 
     .projects-page .project-kicker {
         font-size: 0.6rem !important;
-
         letter-spacing: 0.08em;
     }
 
     .projects-page .project-type {
         font-size: 0.58rem !important;
-
         line-height: 1.5 !important;
     }
 
-
-    /* -----------------------------------------------------
-       DECORATIVE WORDS
-       ----------------------------------------------------- */
+    /* DECORATIVE WORDS */
 
     .projects-page .project-rimorse .project-main::after {
         font-size: 2.8rem;
@@ -577,10 +1377,7 @@
         opacity: 0.2;
     }
 
-
-    /* -----------------------------------------------------
-       DESCRIPTION
-       ----------------------------------------------------- */
+    /* DESCRIPTION */
 
     .projects-page .project-description {
         margin-top: 2rem;
@@ -588,18 +1385,13 @@
 
     .projects-page .project-description p {
         font-size: 0.92rem !important;
-
         line-height: 1.8 !important;
     }
 
-
-    /* -----------------------------------------------------
-       TECHNOLOGY TAGS
-       ----------------------------------------------------- */
+    /* TECHNOLOGY TAGS */
 
     .projects-page .project-tech {
         margin-top: 2rem;
-
         gap: 0.5rem;
     }
 
@@ -618,10 +1410,7 @@
             );
     }
 
-
-    /* -----------------------------------------------------
-       HIGHLIGHT
-       ----------------------------------------------------- */
+    /* HIGHLIGHT */
 
     .projects-page .project-highlight {
         width: 100%;
@@ -646,14 +1435,10 @@
 
     .projects-page .project-highlight p {
         font-size: 0.84rem !important;
-
         line-height: 1.6 !important;
     }
 
-
-    /* -----------------------------------------------------
-       BUTTONS
-       ----------------------------------------------------- */
+    /* BUTTONS */
 
     .projects-page .project-actions {
         margin-top: 2rem;
@@ -676,10 +1461,7 @@
         gap: 0.5rem;
     }
 
-
-    /* -----------------------------------------------------
-       CLOSING
-       ----------------------------------------------------- */
+    /* CLOSING */
 
     .projects-page .projects-closing {
         width: 88% !important;
@@ -709,7 +1491,6 @@
         margin-top: 2.5rem;
 
         font-size: 0.92rem !important;
-
         line-height: 1.8 !important;
     }
 
@@ -718,14 +1499,10 @@
 
         max-width: 240px;
 
-        padding:
-            1rem;
+        padding: 1rem;
     }
 
-
-    /* -----------------------------------------------------
-       FOOTER
-       ----------------------------------------------------- */
+    /* FOOTER */
 
     .projects-page .about-footer {
         padding:
@@ -757,7 +1534,7 @@
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   PROJECT PAGE — VERY SMALL PHONES
    ========================================================= */
 
 @media screen and (max-width: 380px) {
@@ -791,20 +1568,17 @@
 
 
 /* =========================================================
-   REDUCED MOTION
+   GLOBAL REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .projects-page *,
-    .projects-page *::before,
-    .projects-page *::after {
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
-
         animation-iteration-count: 1 !important;
-
         transition-duration: 0.01ms !important;
-
         scroll-behavior: auto !important;
     }
 }
