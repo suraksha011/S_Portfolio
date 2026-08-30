@@ -1,0 +1,1512 @@
+
+
+.projects-page {
+    --ink: #181716;
+    --text: #4f4b47;
+    --muted: #77716b;
+
+    --cream: #f8f4ec;
+    --white: #fffdf8;
+
+    --red: #b91f2a;
+    --coral: #e98773;
+    --peach: #f3c5a8;
+
+    --lavender: #b9a9d6;
+    --blue: #9fc5d8;
+    --mint: #a8cbb7;
+
+    --yellow: #e7c85c;
+    --sage: #b7c69b;
+
+    --line: rgba(17, 17, 17, 0.16);
+    --line-dark: rgba(17, 17, 17, 0.32);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.projects-page {
+    background: var(--cream);
+    color: var(--ink);
+
+    overflow-x: hidden;
+}
+
+.projects-page main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.projects-page section {
+    height: auto;
+    min-height: 0;
+}
+
+
+/* =========================================================
+   BORDER
+   ========================================================= */
+
+.projects-page::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 12px;
+
+    border: 1px solid var(--line);
+
+    pointer-events: none;
+
+    z-index: 9999;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.projects-page .about-header {
+    position: relative;
+
+    width: min(1160px, 88%);
+
+    height: 145px;
+
+    margin: 0 auto;
+
+    padding-top: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--line-dark);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.projects-page .about-logo {
+    position: relative;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--ink);
+
+    border-radius: 50%;
+
+    color: var(--red);
+
+    font-family: var(--display);
+
+    font-size: 1.1rem;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transform: rotate(-7deg);
+
+    transition: 0.25s ease;
+}
+
+.projects-page .about-logo::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 4px;
+
+    border: 1px dashed var(--coral);
+
+    border-radius: 50%;
+}
+
+.projects-page .about-logo span {
+    position: relative;
+    z-index: 2;
+}
+
+.projects-page .about-logo:hover {
+    background: var(--red);
+
+    color: var(--cream);
+
+    transform:
+        rotate(0deg)
+        scale(1.06);
+}
+
+
+/* =========================================================
+   HEADER TITLE
+   ========================================================= */
+
+.projects-page .about-header-title {
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.projects-page .about-header-title span {
+    color: var(--red);
+
+    font-family: var(--mono);
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.16em;
+}
+
+.projects-page .about-header-title strong {
+    margin-top: 5px;
+
+    color: var(--ink);
+
+    font-family: var(--display);
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+}
+
+.projects-page .about-header-title small {
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.projects-page .about-navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    margin-top: 25px;
+}
+
+.projects-page .about-navigation a {
+    position: relative;
+
+    color: var(--ink);
+
+    font-family: var(--mono);
+
+    font-size: 0.92rem;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.projects-page .about-navigation a:hover,
+.projects-page .about-navigation a.active {
+    color: var(--red);
+
+    text-decoration: none;
+}
+
+.projects-page .about-navigation a::before {
+    content: "";
+
+    position: absolute;
+
+    left: -9px;
+    top: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    background: var(--red);
+
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+
+    opacity: 0;
+}
+
+.projects-page .about-navigation a:hover::before,
+.projects-page .about-navigation a.active::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.projects-hero {
+    position: relative;
+
+    width: min(1160px, 88%) !important;
+
+    min-height: 620px !important;
+
+    margin: 0 auto !important;
+
+    padding: 6rem 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        70px
+        minmax(0, 1fr)
+        180px !important;
+
+    gap: 3.5rem;
+
+    align-items: center !important;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* =========================================================
+   HERO INDEX
+   ========================================================= */
+
+.projects-index {
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    border-right: 1px solid var(--line);
+}
+
+.projects-index span {
+    color: var(--red);
+
+    font-family: var(--display);
+
+    font-size: 1.25rem;
+}
+
+.projects-index div {
+    width: 1px;
+
+    height: 150px;
+
+    background: var(--line);
+}
+
+.projects-index small {
+    color: var(--muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    writing-mode: vertical-rl;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.projects-eyebrow {
+    margin-bottom: 1.7rem;
+
+    color: var(--red) !important;
+
+    font-family: var(--mono) !important;
+
+    font-size: 0.7rem !important;
+
+    letter-spacing: 0.1em;
+}
+
+.projects-hero-content h1 {
+    margin: 0;
+
+    color: var(--ink) !important;
+
+    font-family: var(--display);
+
+    font-size: clamp(5rem, 9vw, 9rem);
+
+    font-weight: 500;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.08em;
+}
+
+.projects-hero-content h1 em {
+    color: var(--red) !important;
+
+    font-style: italic;
+}
+
+.projects-intro {
+    max-width: 680px;
+
+    margin-top: 3.5rem;
+
+    color: var(--text) !important;
+
+    font-size: 1.15rem !important;
+
+    line-height: 1.85 !important;
+}
+
+
+/* =========================================================
+   HERO STAMP
+   ========================================================= */
+
+.projects-stamp {
+    position: relative;
+
+    width: 170px;
+    height: 170px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--yellow);
+
+    border: 1px solid var(--ink);
+
+    border-radius: 50%;
+
+    transform: rotate(7deg);
+
+    animation: projectStamp 5s ease-in-out infinite;
+}
+
+.projects-stamp::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 9px;
+
+    border: 1px dashed var(--ink);
+
+    border-radius: 50%;
+}
+
+.projects-stamp > span,
+.projects-stamp p {
+    position: relative;
+}
+
+.projects-stamp > span {
+    font-size: 1.5rem;
+}
+
+.projects-stamp p {
+    margin-top: 0.5rem;
+
+    color: var(--ink) !important;
+
+    font-family: var(--mono) !important;
+
+    font-size: 0.62rem !important;
+
+    text-align: center;
+
+    line-height: 1.5 !important;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.projects-intro-section {
+    width: min(1160px, 88%) !important;
+
+    margin: 0 auto !important;
+
+    padding: 8rem 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        80px
+        minmax(0, 1fr) !important;
+
+    gap: 4rem;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.projects-section-label {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.8rem;
+}
+
+.projects-section-label span {
+    color: var(--red);
+
+    font-family: var(--display);
+
+    font-size: 1.2rem;
+}
+
+.projects-section-label small {
+    color: var(--muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    writing-mode: vertical-rl;
+}
+
+.projects-intro-content {
+    max-width: 900px;
+}
+
+.projects-kicker,
+.project-kicker {
+    color: var(--red) !important;
+
+    font-family: var(--mono) !important;
+
+    font-size: 0.7rem !important;
+
+    letter-spacing: 0.1em;
+}
+
+.projects-intro-content h2 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: var(--display);
+
+    font-size: clamp(4rem, 7vw, 7.5rem);
+
+    font-weight: 500;
+
+    line-height: 0.84;
+
+    letter-spacing: -0.08em;
+}
+
+.projects-intro-content h2 em {
+    color: var(--red);
+
+    font-style: italic;
+}
+
+.projects-intro-content > p:not(.projects-kicker) {
+    max-width: 680px;
+
+    margin-top: 2.5rem;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   PROJECT FEATURE
+   ========================================================= */
+
+.project-feature {
+    position: relative;
+
+    width: min(1160px, 88%) !important;
+
+    margin: 0 auto !important;
+
+    padding: 8rem 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        150px
+        minmax(0, 1fr) !important;
+
+    gap: 5rem;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* =========================================================
+   COLOR BLOCKS
+   ========================================================= */
+
+/* RiMorse */
+
+.project-rimorse {
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            transparent 4%,
+            rgba(243, 197, 168, 0.35) 4%,
+            rgba(243, 197, 168, 0.35) 96%,
+            transparent 96%
+        );
+}
+
+.project-rimorse .project-main {
+    position: relative;
+
+    padding: 3rem;
+
+    background: var(--peach);
+
+    border: 1px solid var(--line-dark);
+
+    transform: rotate(-0.7deg);
+}
+
+.project-rimorse .project-main::after {
+    content: "MORSE";
+
+    position: absolute;
+
+    right: 2rem;
+    top: 1.5rem;
+
+    color: rgba(185, 31, 42, 0.13);
+
+    font-family: var(--display);
+
+    font-size: 5rem;
+
+    letter-spacing: -0.08em;
+
+    transform: rotate(-5deg);
+
+    pointer-events: none;
+}
+
+
+/* Breath Mirror */
+
+.project-breath {
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            transparent 4%,
+            rgba(185, 169, 214, 0.28) 4%,
+            rgba(185, 169, 214, 0.28) 96%,
+            transparent 96%
+        );
+}
+
+.project-breath .project-main {
+    position: relative;
+
+    padding: 3rem;
+
+    background: var(--lavender);
+
+    border: 1px solid var(--line-dark);
+
+    transform: rotate(0.6deg);
+}
+
+.project-breath .project-main::after {
+    content: "BREATHE";
+
+    position: absolute;
+
+    right: 1.5rem;
+    top: 2rem;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-family: var(--display);
+
+    font-size: 5rem;
+
+    letter-spacing: -0.08em;
+
+    transform: rotate(-7deg);
+
+    pointer-events: none;
+}
+
+
+/* TickTask */
+
+.project-ticktask {
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            transparent 4%,
+            rgba(183, 198, 155, 0.3) 4%,
+            rgba(183, 198, 155, 0.3) 96%,
+            transparent 96%
+        );
+}
+
+.project-ticktask .project-main {
+    position: relative;
+
+    padding: 3rem;
+
+    background: var(--sage);
+
+    border: 1px solid var(--line-dark);
+
+    transform: rotate(-0.5deg);
+}
+
+.project-ticktask .project-main::after {
+    content: "✓";
+
+    position: absolute;
+
+    right: 2rem;
+    top: 0.5rem;
+
+    color: rgba(185, 31, 42, 0.14);
+
+    font-family: var(--display);
+
+    font-size: 12rem;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+   ========================================================= */
+
+.project-number {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.7rem;
+}
+
+.project-number span {
+    color: var(--red);
+
+    font-family: var(--display);
+
+    font-size: 2rem;
+}
+
+.project-number small {
+    color: var(--muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    writing-mode: vertical-rl;
+}
+
+
+/* =========================================================
+   PROJECT HEADING
+   ========================================================= */
+
+.project-main {
+    max-width: 900px;
+}
+
+.project-heading {
+    position: relative;
+
+    z-index: 2;
+}
+
+.project-heading h2 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: var(--display);
+
+    font-size: clamp(4.5rem, 8vw, 8rem);
+
+    font-weight: 500;
+
+    line-height: 0.82;
+
+    letter-spacing: -0.08em;
+}
+
+.project-heading h2 em {
+    color: var(--red);
+
+    font-style: normal;
+
+    font-size: 0.5em;
+
+    vertical-align: top;
+
+    transition: 0.25s ease;
+}
+
+.project-feature:hover .project-heading h2 em {
+    display: inline-block;
+
+    transform:
+        translate(5px, -5px)
+        rotate(-8deg);
+}
+
+.project-type {
+    margin-top: 1rem;
+
+    color: var(--ink) !important;
+
+    font-family: var(--mono) !important;
+
+    font-size: 0.68rem !important;
+
+    letter-spacing: 0.06em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.project-description {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+    margin-top: 3rem;
+}
+
+.project-description p {
+    margin-bottom: 1.3rem;
+
+    color: var(--ink) !important;
+
+    font-size: 1.05rem !important;
+
+    line-height: 1.9 !important;
+}
+
+.project-description strong {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+   ========================================================= */
+
+.project-tech {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 2.5rem;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+}
+
+.project-tech span {
+    padding: 0.55rem 0.75rem;
+
+    background: rgba(255, 253, 248, 0.55);
+
+    border: 1px solid var(--line-dark);
+
+    color: var(--ink);
+
+    font-family: var(--mono);
+
+    font-size: 0.6rem;
+
+    transition: 0.2s ease;
+}
+
+.project-tech span:hover {
+    background: var(--ink);
+
+    color: var(--cream);
+
+    transform:
+        translateY(-3px)
+        rotate(-1deg);
+}
+
+
+/* =========================================================
+   PROJECT HIGHLIGHT
+   ========================================================= */
+
+.project-highlight {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(620px, 100%);
+
+    margin-top: 3rem;
+
+    padding: 1.3rem 1.5rem;
+
+    display: grid;
+
+    grid-template-columns:
+        150px
+        minmax(0, 1fr);
+
+    gap: 1.5rem;
+
+    background: rgba(255, 253, 248, 0.5);
+
+    border-left: 4px solid var(--red);
+}
+
+.project-highlight span {
+    color: var(--red);
+
+    font-family: var(--display);
+
+    font-size: 1.5rem;
+
+    font-weight: 500;
+}
+
+.project-highlight p {
+    margin: 0;
+
+    color: var(--text) !important;
+
+    font-size: 0.9rem !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.project-actions {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 3rem;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.8rem;
+}
+
+.project-actions a {
+    min-width: 120px;
+
+    padding: 0.8rem 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1.5rem;
+
+    background: var(--white);
+
+    border: 1px solid var(--ink);
+
+    color: var(--ink);
+
+    font-family: var(--mono);
+
+    font-size: 0.65rem;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.project-actions a:hover {
+    background: var(--red);
+
+    color: var(--cream);
+
+    border-color: var(--red);
+
+    transform:
+        translateY(-4px)
+        rotate(-1deg);
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.projects-closing {
+    width: min(1160px, 88%) !important;
+
+    min-height: 650px;
+
+    margin: 0 auto !important;
+
+    padding: 9rem 0 !important;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.projects-closing > p:first-child {
+    color: var(--red);
+
+    font-family: var(--mono);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.1em;
+}
+
+.projects-closing h2 {
+    max-width: 950px;
+
+    margin-top: 1.5rem;
+
+    color: var(--ink);
+
+    font-family: var(--display);
+
+    font-size: clamp(5rem, 10vw, 10rem);
+
+    font-weight: 500;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.09em;
+}
+
+.projects-closing h2 em {
+    color: var(--red);
+
+    font-style: italic;
+}
+
+.projects-closing-description {
+    max-width: 600px;
+
+    margin-top: 3rem;
+
+    color: var(--text) !important;
+
+    font-size: 1.05rem !important;
+
+    line-height: 1.85 !important;
+}
+
+.projects-closing > a {
+    width: 200px;
+
+    margin-top: 2.5rem;
+
+    padding: 1rem 1.2rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border: 1px solid var(--ink);
+
+    color: var(--ink);
+
+    font-family: var(--mono);
+
+    font-size: 0.68rem;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.projects-closing > a:hover {
+    background: var(--red);
+
+    color: var(--cream);
+
+    border-color: var(--red);
+
+    transform:
+        translateY(-5px)
+        rotate(-1deg);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.projects-page .about-footer {
+    width: 100%;
+
+    min-height: 220px;
+
+    margin: 0;
+
+    padding: 3rem 0;
+
+    border-top: 1px solid var(--line-dark);
+}
+
+.projects-page .about-footer-inner {
+    width: min(1160px, 88%);
+
+    margin: 0 auto;
+}
+
+.projects-page .about-footer-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.projects-page .about-footer-logo {
+    color: var(--red);
+
+    font-family: var(--display);
+
+    font-size: 2rem;
+}
+
+.projects-page .about-footer-top small {
+    color: var(--muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+}
+
+.projects-page .about-footer-bottom {
+    margin-top: 4rem;
+
+    padding-top: 1rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid var(--line);
+}
+
+.projects-page .about-footer-bottom span,
+.projects-page .about-footer-bottom a {
+    color: var(--muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes projectStamp {
+
+    0%,
+    100% {
+        transform:
+            rotate(7deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(3deg)
+            translateY(-8px);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .projects-page .about-header {
+        width: 90%;
+    }
+
+    .projects-hero {
+        width: 90% !important;
+
+        grid-template-columns:
+            60px
+            minmax(0, 1fr) !important;
+    }
+
+    .projects-stamp {
+        display: none;
+    }
+
+    .projects-intro-section,
+    .project-feature,
+    .projects-closing {
+        width: 90% !important;
+    }
+
+    .project-feature {
+        grid-template-columns:
+            110px
+            minmax(0, 1fr) !important;
+
+        gap: 3rem;
+    }
+
+    .project-rimorse .project-main,
+    .project-breath .project-main,
+    .project-ticktask .project-main {
+        padding: 2.5rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+    .projects-page::before {
+        inset: 7px;
+    }
+
+
+    /* Header */
+
+    .projects-page .about-header {
+        width: 88%;
+
+        height: 95px;
+
+        padding-top: 12px;
+    }
+
+    .projects-page .about-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .projects-page .about-header-title,
+    .projects-page .about-navigation {
+        display: none;
+    }
+
+
+    /* Hero */
+
+    .projects-hero {
+        width: 88% !important;
+
+        display: block !important;
+
+        min-height: auto !important;
+
+        padding: 5rem 0 !important;
+    }
+
+    .projects-index {
+        display: none;
+    }
+
+    .projects-hero-content h1 {
+        font-size:
+            clamp(
+                4.5rem,
+                16vw,
+                7rem
+            );
+    }
+
+    .projects-intro {
+        margin-top: 3rem;
+
+        font-size: 1rem !important;
+    }
+
+
+    /* Intro */
+
+    .projects-intro-section {
+        width: 88% !important;
+
+        display: block !important;
+
+        padding: 6rem 0 !important;
+    }
+
+    .projects-section-label {
+        flex-direction: row;
+
+        align-items: center;
+
+        margin-bottom: 2.5rem;
+    }
+
+    .projects-section-label small {
+        writing-mode: initial;
+    }
+
+    .projects-intro-content h2 {
+        font-size:
+            clamp(
+                3.8rem,
+                14vw,
+                6rem
+            );
+    }
+
+
+    /* Project */
+
+    .project-feature {
+        width: 88% !important;
+
+        display: block !important;
+
+        padding: 5rem 0 !important;
+    }
+
+    .project-number {
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 1rem;
+
+        margin-bottom: 2.5rem;
+    }
+
+    .project-number small {
+        writing-mode: initial;
+    }
+
+    .project-rimorse .project-main,
+    .project-breath .project-main,
+    .project-ticktask .project-main {
+        padding: 1.7rem;
+
+        transform: none;
+    }
+
+    .project-rimorse .project-main::after,
+    .project-breath .project-main::after,
+    .project-ticktask .project-main::after {
+        opacity: 0.35;
+
+        font-size: 3.5rem;
+    }
+
+    .project-heading h2 {
+        font-size:
+            clamp(
+                4rem,
+                15vw,
+                6.5rem
+            );
+    }
+
+    .project-description {
+        margin-top: 2.5rem;
+    }
+
+    .project-description p {
+        font-size: 0.95rem !important;
+
+        line-height: 1.8 !important;
+    }
+
+    .project-highlight {
+        grid-template-columns: 1fr;
+
+        gap: 0.7rem;
+    }
+
+    .project-actions a {
+        flex: 1;
+    }
+
+
+    /* Closing */
+
+    .projects-closing {
+        width: 88% !important;
+
+        min-height: 500px;
+
+        padding: 6rem 0 !important;
+    }
+
+    .projects-closing h2 {
+        font-size:
+            clamp(
+                4rem,
+                16vw,
+                7rem
+            );
+    }
+
+
+    /* Footer */
+
+    .projects-page .about-footer-inner {
+        width: 88%;
+    }
+
+    .projects-page .about-footer-top,
+    .projects-page .about-footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 500px) {
+
+    .projects-hero-content h1 {
+        font-size:
+            clamp(
+                4rem,
+                17vw,
+                6rem
+            );
+    }
+
+    .project-heading h2 {
+        font-size:
+            clamp(
+                3.7rem,
+                15vw,
+                5.8rem
+            );
+    }
+
+    .project-tech span {
+        font-size: 0.56rem;
+    }
+
+    .projects-closing h2 {
+        font-size:
+            clamp(
+                3.8rem,
+                16vw,
+                6rem
+            );
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .projects-stamp {
+        animation: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}

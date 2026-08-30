@@ -1,0 +1,1768 @@
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+.experience-page {
+    --exp-red: #b91f2a;
+    --exp-ink: #181716;
+    --exp-text: #4f4b47;
+    --exp-muted: #77716b;
+
+    --exp-cream: #f8f4ec;
+    --exp-white: #fffdf8;
+
+    --exp-yellow: #e5cb63;
+    --exp-pink: #dfa0aa;
+
+    --exp-line: rgba(17, 17, 17, 0.16);
+    --exp-line-dark: rgba(17, 17, 17, 0.32);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.experience-page {
+    background: var(--exp-cream);
+    color: var(--exp-ink);
+
+    overflow-x: hidden;
+}
+
+.experience-page main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.experience-page section {
+    height: auto;
+    min-height: 0;
+}
+
+.experience-page p {
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   MINIMAL PAGE BORDER
+   ========================================================= */
+
+.experience-page::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 12px;
+
+    border: 1px solid var(--exp-line);
+
+    pointer-events: none;
+
+    z-index: 9999;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.experience-page .about-header {
+    position: relative;
+
+    width: min(1160px, 88%);
+
+    height: 145px;
+
+    margin: 0 auto;
+
+    padding-top: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--exp-line-dark);
+}
+
+
+/* =========================================================
+   HEADER LOGO
+   ========================================================= */
+
+.experience-page .about-logo {
+    position: relative;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--exp-ink);
+
+    border-radius: 50%;
+
+    color: var(--exp-ink);
+
+    font-family: var(--display);
+
+    font-size: 1.1rem;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transform: rotate(-7deg);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.experience-page .about-logo::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 4px;
+
+    border: 1px dashed var(--exp-red);
+
+    border-radius: 50%;
+}
+
+.experience-page .about-logo span {
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--exp-red);
+}
+
+.experience-page .about-logo:hover {
+    background: var(--exp-red);
+
+    transform:
+        rotate(0deg)
+        scale(1.06);
+}
+
+.experience-page .about-logo:hover span {
+    color: var(--exp-cream);
+}
+
+
+/* =========================================================
+   HEADER TITLE
+   ========================================================= */
+
+.experience-page .about-header-title {
+    position: absolute;
+
+    top: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    line-height: 1.2;
+}
+
+.experience-page .about-header-title span {
+    color: var(--exp-red);
+
+    font-family: var(--mono);
+
+    font-size: 0.72rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.16em;
+}
+
+.experience-page .about-header-title strong {
+    margin-top: 5px;
+
+    color: var(--exp-ink);
+
+    font-family: var(--display);
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+}
+
+.experience-page .about-header-title small {
+    margin-top: 5px;
+
+    color: var(--exp-muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.experience-page .about-navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    margin-top: 25px;
+}
+
+.experience-page .about-navigation a {
+    position: relative;
+
+    color: var(--exp-ink);
+
+    font-family: var(--mono);
+
+    font-size: 0.92rem;
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    letter-spacing: 0.05em;
+
+    transition:
+        color 0.2s ease;
+}
+
+.experience-page .about-navigation a:hover,
+.experience-page .about-navigation a.active {
+    color: var(--exp-red);
+
+    text-decoration: none;
+}
+
+.experience-page .about-navigation a::before {
+    content: "";
+
+    position: absolute;
+
+    left: -9px;
+
+    top: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    background: var(--exp-red);
+
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+.experience-page .about-navigation a:hover::before,
+.experience-page .about-navigation a.active::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.experience-hero {
+    width: min(1160px, 88%) !important;
+
+    min-height: 620px !important;
+
+    margin: 0 auto !important;
+
+    padding: 6rem 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        70px
+        minmax(0, 1fr) !important;
+
+    column-gap: 3.5rem !important;
+
+    align-items: center !important;
+
+    border-bottom:
+        1px solid var(--exp-line);
+}
+
+
+/* =========================================================
+   HERO INDEX
+   ========================================================= */
+
+.experience-index {
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    border-right:
+        1px solid var(--exp-line);
+}
+
+.experience-index span {
+    color: var(--exp-red);
+
+    font-family: var(--display);
+
+    font-size: 1.25rem;
+
+    font-weight: 400;
+}
+
+.experience-index div {
+    width: 1px;
+
+    height: 150px;
+
+    background: var(--exp-line);
+}
+
+.experience-index small {
+    color: var(--exp-muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+
+    writing-mode: vertical-rl;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.experience-hero-content {
+    width: 100%;
+
+    min-width: 0;
+}
+
+.experience-eyebrow {
+    margin-bottom: 1.7rem;
+
+    color: var(--exp-red) !important;
+
+    font-family: var(--mono) !important;
+
+    font-size: 0.7rem !important;
+
+    font-weight: 400 !important;
+
+    letter-spacing: 0.1em;
+
+    line-height: 1.6 !important;
+}
+
+
+/* Hero heading */
+
+.experience-hero-content h1 {
+    width: 100%;
+
+    margin: 0;
+
+    color: var(--exp-ink) !important;
+
+    font-family: var(--display);
+
+    font-size:
+        clamp(
+            5rem,
+            10vw,
+            10rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.08em;
+}
+
+.experience-hero-content h1 em {
+    color: var(--exp-red) !important;
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+/* Intro */
+
+.experience-intro {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin-top: 3.5rem;
+
+    color: var(--exp-text) !important;
+
+    font-family: var(--body) !important;
+
+    font-size: 1.15rem !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1.85 !important;
+}
+
+
+/* =========================================================
+   CAREER INTRO
+   ========================================================= */
+
+.career-section {
+    width: min(1160px, 88%) !important;
+
+    margin: 0 auto !important;
+
+    padding:
+        8rem 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        80px
+        minmax(0, 1fr) !important;
+
+    column-gap: 4rem !important;
+
+    border-bottom:
+        1px solid var(--exp-line);
+}
+
+
+/* Section label */
+
+.career-section-label {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.8rem;
+}
+
+.career-section-label span {
+    color: var(--exp-red);
+
+    font-family: var(--display);
+
+    font-size: 1.2rem;
+
+    font-weight: 400;
+}
+
+.career-section-label small {
+    color: var(--exp-muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+
+    writing-mode: vertical-rl;
+}
+
+
+/* Intro content */
+
+.career-intro {
+    max-width: 850px;
+}
+
+.section-kicker {
+    margin-bottom: 1.5rem;
+
+    color: var(--exp-red) !important;
+
+    font-family: var(--mono) !important;
+
+    font-size: 0.7rem !important;
+
+    font-weight: 400 !important;
+
+    letter-spacing: 0.1em;
+}
+
+.career-intro h2 {
+    margin: 0;
+
+    color: var(--exp-ink);
+
+    font-family: var(--display);
+
+    font-size:
+        clamp(
+            4rem,
+            7vw,
+            7.5rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.85;
+
+    letter-spacing: -0.07em;
+}
+
+.career-intro h2 em {
+    color: var(--exp-red);
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+.career-intro > p:not(.section-kicker) {
+    max-width: 680px;
+
+    margin-top: 2.5rem;
+
+    color: var(--exp-text);
+
+    font-family: var(--body);
+
+    font-size: 1.05rem;
+
+    font-weight: 400;
+
+    line-height: 1.85;
+}
+
+.career-intro strong {
+    color: var(--exp-ink);
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   EXPERIENCE BLOCK
+   ========================================================= */
+
+.experience-block {
+    width: min(1160px, 88%) !important;
+
+    margin: 0 auto !important;
+
+    padding:
+        8rem 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        230px
+        minmax(0, 1fr) !important;
+
+    column-gap: 5rem !important;
+
+    border-bottom:
+        1px solid var(--exp-line);
+}
+
+
+/* Meta */
+
+.experience-meta {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    padding-top: 0.5rem;
+}
+
+.experience-number {
+    color: var(--exp-red);
+
+    font-family: var(--display);
+
+    font-size: 1.2rem;
+
+    font-weight: 400;
+}
+
+.experience-date {
+    color: var(--exp-muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.68rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.05em;
+}
+
+.experience-company {
+    max-width: 180px;
+
+    color: var(--exp-ink);
+
+    font-family: var(--mono);
+
+    font-size: 0.72rem;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* Main */
+
+.experience-main {
+    max-width: 800px;
+}
+
+.experience-kicker {
+    margin-bottom: 1.5rem;
+
+    color: var(--exp-red) !important;
+
+    font-family: var(--mono) !important;
+
+    font-size: 0.7rem !important;
+
+    font-weight: 400 !important;
+
+    letter-spacing: 0.1em;
+
+    line-height: 1.6 !important;
+}
+
+.experience-main h2 {
+    margin: 0;
+
+    color: var(--exp-ink);
+
+    font-family: var(--display);
+
+    font-size:
+        clamp(
+            4.5rem,
+            7vw,
+            7.5rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.82;
+
+    letter-spacing: -0.08em;
+}
+
+.experience-main h2 em {
+    color: var(--exp-red);
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+/* Description */
+
+.experience-description {
+    max-width: 650px;
+
+    margin-top: 3rem;
+
+    color: var(--exp-text) !important;
+
+    font-family: var(--body);
+
+    font-size: 1.05rem !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1.9 !important;
+}
+
+.experience-description.secondary {
+    margin-top: 1.5rem;
+}
+
+
+/* =========================================================
+   EXPERIENCE TAGS
+   ========================================================= */
+
+.experience-tags {
+    margin-top: 3rem;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem;
+}
+
+.experience-tags span {
+    padding:
+        0.55rem 0.8rem;
+
+    border:
+        1px solid var(--exp-line-dark);
+
+    color: var(--exp-ink);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.04em;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.experience-tags span:hover {
+    background: var(--exp-red);
+
+    color: var(--exp-cream);
+
+    transform:
+        translateY(-3px)
+        rotate(-1deg);
+}
+
+
+/* =========================================================
+   FINTECH BLOCK
+   ========================================================= */
+
+.fintech-block {
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            transparent 100%
+        );
+}
+
+.fintech-block .experience-main {
+    position: relative;
+}
+
+
+/* Small decorative mark */
+
+.fintech-block .experience-main::after {
+    content: "FINTECH";
+
+    position: absolute;
+
+    right: 0;
+
+    top: 1rem;
+
+    color: rgba(
+        185,
+        31,
+        42,
+        0.08
+    );
+
+    font-family: var(--display);
+
+    font-size: 5rem;
+
+    font-weight: 500;
+
+    letter-spacing: -0.08em;
+
+    transform: rotate(-8deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HACKATHON SECTION
+   ========================================================= */
+
+.hackathon-section {
+    width: min(1160px, 88%) !important;
+
+    margin: 0 auto !important;
+
+    padding:
+        9rem 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        80px
+        minmax(0, 1fr) !important;
+
+    column-gap: 4rem !important;
+
+    border-bottom:
+        1px solid var(--exp-line);
+}
+
+
+/* Label */
+
+.hackathon-label {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.8rem;
+}
+
+.hackathon-label span {
+    color: var(--exp-red);
+
+    font-family: var(--display);
+
+    font-size: 1.2rem;
+
+    font-weight: 400;
+}
+
+.hackathon-label small {
+    color: var(--exp-muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+
+    writing-mode: vertical-rl;
+}
+
+
+/* Content */
+
+.hackathon-content {
+    max-width: 900px;
+}
+
+.hackathon-content > .experience-kicker {
+    margin-bottom: 1.5rem;
+}
+
+.hackathon-content h2 {
+    margin: 0;
+
+    color: var(--exp-ink);
+
+    font-family: var(--display);
+
+    font-size:
+        clamp(
+            4rem,
+            7vw,
+            7.5rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.83;
+
+    letter-spacing: -0.08em;
+}
+
+.hackathon-content h2 em {
+    color: var(--exp-red);
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+.hackathon-intro {
+    max-width: 680px;
+
+    margin-top: 3rem;
+
+    color: var(--exp-text);
+
+    font-family: var(--body);
+
+    font-size: 1.05rem;
+
+    font-weight: 400;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   HACKATHON CARDS
+   ========================================================= */
+
+.hackathon-card {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 330px;
+
+    margin-top: 5rem;
+
+    padding: 2rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background: var(--exp-pink);
+
+    border:
+        1px solid var(--exp-line-dark);
+
+    transform: rotate(-0.7deg);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hackathon-card:hover {
+    transform:
+        rotate(-0.7deg)
+        translateY(-7px);
+
+    box-shadow:
+        8px 8px 0
+        rgba(
+            17,
+            17,
+            17,
+            0.08
+        );
+}
+
+
+/* Alternate card */
+
+.hackathon-card.alternate {
+    background: var(--exp-white);
+
+    transform: rotate(0.7deg);
+
+    margin-top: 2rem;
+}
+
+.hackathon-card.alternate:hover {
+    transform:
+        rotate(0.7deg)
+        translateY(-7px);
+}
+
+
+/* Card top */
+
+.hackathon-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 1rem;
+
+    border-bottom:
+        1px solid var(--exp-line-dark);
+
+    color: var(--exp-red);
+
+    font-family: var(--mono);
+
+    font-size: 0.68rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* Card body */
+
+.hackathon-card-body {
+    padding:
+        2.5rem 0;
+}
+
+.hackathon-card-body h3 {
+    margin: 0;
+
+    color: var(--exp-ink);
+
+    font-family: var(--display);
+
+    font-size:
+        clamp(
+            2.5rem,
+            4vw,
+            4.5rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+}
+
+.hackathon-card-body p {
+    max-width: 600px;
+
+    margin-top: 1.5rem;
+
+    color: var(--exp-text);
+
+    font-family: var(--body);
+
+    font-size: 0.98rem;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* Card bottom */
+
+.hackathon-card-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding-top: 1rem;
+
+    border-top:
+        1px solid var(--exp-line-dark);
+
+    color: var(--exp-muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CLOSING SECTION
+   ========================================================= */
+
+.experience-closing {
+    width: min(1160px, 88%) !important;
+
+    min-height: 600px;
+
+    margin: 0 auto !important;
+
+    padding:
+        9rem 0 !important;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.experience-closing > p:first-child {
+    color: var(--exp-red);
+
+    font-family: var(--mono);
+
+    font-size: 0.7rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.1em;
+}
+
+.experience-closing h2 {
+    margin: 1.5rem 0 0;
+
+    color: var(--exp-ink);
+
+    font-family: var(--display);
+
+    font-size:
+        clamp(
+            5rem,
+            10vw,
+            10rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.09em;
+}
+
+.experience-closing h2 em {
+    color: var(--exp-red);
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+.closing-line {
+    width: 100%;
+
+    max-width: 700px;
+
+    height: 1px;
+
+    margin-top: 4rem;
+
+    background: var(--exp-line-dark);
+}
+
+.closing-description {
+    max-width: 560px;
+
+    margin-top: 2rem;
+
+    color: var(--exp-text);
+
+    font-family: var(--body);
+
+    font-size: 1.05rem;
+
+    font-weight: 400;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.experience-page .about-footer {
+    width: 100%;
+
+    min-height: 220px;
+
+    margin: 0;
+
+    padding: 3rem 0;
+
+    border-top:
+        1px solid var(--exp-line-dark);
+}
+
+.experience-page .about-footer-inner {
+    width: min(1160px, 88%);
+
+    margin: 0 auto;
+}
+
+.experience-page .about-footer-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.experience-page .about-footer-logo {
+    color: var(--exp-red);
+
+    font-family: var(--display);
+
+    font-size: 2rem;
+
+    font-weight: 500;
+}
+
+.experience-page .about-footer-top small {
+    color: var(--exp-muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+}
+
+.experience-page .about-footer-bottom {
+    margin-top: 4rem;
+
+    padding-top: 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top:
+        1px solid var(--exp-line);
+}
+
+.experience-page .about-footer-bottom span,
+.experience-page .about-footer-bottom a {
+    color: var(--exp-muted);
+
+    font-family: var(--mono);
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+
+    text-decoration: none;
+}
+
+.experience-page .about-footer-bottom a:hover {
+    color: var(--exp-red);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+.experience-hero-content,
+.career-intro,
+.experience-main,
+.hackathon-content,
+.experience-closing {
+    animation:
+        experienceFadeIn
+        0.8s
+        ease
+        both;
+}
+
+@keyframes experienceFadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .experience-page .about-header {
+        width: 90%;
+    }
+
+    .experience-hero {
+        width: 90% !important;
+
+        grid-template-columns:
+            60px
+            minmax(0, 1fr) !important;
+
+        column-gap: 3rem !important;
+    }
+
+    .career-section,
+    .hackathon-section {
+        width: 90% !important;
+
+        column-gap: 3rem !important;
+    }
+
+    .experience-block {
+        width: 90% !important;
+
+        grid-template-columns:
+            180px
+            minmax(0, 1fr) !important;
+
+        column-gap: 3rem !important;
+    }
+
+    .experience-main h2 {
+        font-size:
+            clamp(
+                4rem,
+                7vw,
+                6.5rem
+            );
+    }
+
+    .hackathon-content h2 {
+        font-size:
+            clamp(
+                3.8rem,
+                7vw,
+                6.5rem
+            );
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+    .experience-page::before {
+        inset: 7px;
+    }
+
+
+    /* Header */
+
+    .experience-page .about-header {
+        width: 88%;
+
+        height: 95px;
+
+        padding-top: 12px;
+    }
+
+    .experience-page .about-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .experience-page .about-header-title,
+    .experience-page .about-navigation {
+        display: none;
+    }
+
+
+    /* Hero */
+
+    .experience-hero {
+        width: 88% !important;
+
+        display: block !important;
+
+        min-height: auto !important;
+
+        padding:
+            5rem 0 !important;
+    }
+
+    .experience-index {
+        display: none;
+    }
+
+    .experience-hero-content h1 {
+        font-size:
+            clamp(
+                4.5rem,
+                16vw,
+                7rem
+            );
+    }
+
+    .experience-intro {
+        margin-top: 3rem;
+
+        font-size: 1rem !important;
+
+        line-height: 1.8 !important;
+    }
+
+
+    /* Career */
+
+    .career-section {
+        width: 88% !important;
+
+        display: block !important;
+
+        padding:
+            6rem 0 !important;
+    }
+
+    .career-section-label {
+        flex-direction: row;
+
+        align-items: center;
+
+        margin-bottom: 2.5rem;
+    }
+
+    .career-section-label small {
+        writing-mode: initial;
+    }
+
+    .career-intro h2 {
+        font-size:
+            clamp(
+                3.8rem,
+                14vw,
+                6rem
+            );
+    }
+
+    .career-intro > p:not(.section-kicker) {
+        font-size: 0.95rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* Experience blocks */
+
+    .experience-block {
+        width: 88% !important;
+
+        display: block !important;
+
+        padding:
+            6rem 0 !important;
+    }
+
+    .experience-meta {
+        margin-bottom: 3rem;
+
+        padding: 0;
+
+        display: flex;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        align-items: center;
+
+        gap: 0.7rem 1.2rem;
+    }
+
+    .experience-number {
+        font-size: 1rem;
+    }
+
+    .experience-date,
+    .experience-company {
+        font-size: 0.62rem;
+    }
+
+    .experience-main h2 {
+        font-size:
+            clamp(
+                4rem,
+                15vw,
+                6.5rem
+            );
+    }
+
+    .experience-description {
+        margin-top: 2.5rem;
+
+        font-size: 0.95rem !important;
+
+        line-height: 1.8 !important;
+    }
+
+    .experience-tags {
+        margin-top: 2.5rem;
+    }
+
+
+    /* Hide decorative FinTech word */
+
+    .fintech-block .experience-main::after {
+        display: none;
+    }
+
+
+    /* Hackathons */
+
+    .hackathon-section {
+        width: 88% !important;
+
+        display: block !important;
+
+        padding:
+            6rem 0 !important;
+    }
+
+    .hackathon-label {
+        flex-direction: row;
+
+        align-items: center;
+
+        margin-bottom: 2.5rem;
+    }
+
+    .hackathon-label small {
+        writing-mode: initial;
+    }
+
+    .hackathon-content h2 {
+        font-size:
+            clamp(
+                3.7rem,
+                14vw,
+                6rem
+            );
+    }
+
+    .hackathon-intro {
+        font-size: 0.95rem;
+
+        line-height: 1.8;
+    }
+
+    .hackathon-card {
+        min-height: 350px;
+
+        margin-top: 4rem;
+
+        padding: 1.5rem;
+    }
+
+    .hackathon-card-body {
+        padding:
+            2rem 0;
+    }
+
+    .hackathon-card-body h3 {
+        font-size:
+            clamp(
+                2.5rem,
+                10vw,
+                4rem
+            );
+    }
+
+    .hackathon-card-body p {
+        font-size: 0.9rem;
+    }
+
+    .hackathon-card-bottom {
+        flex-direction: column;
+
+        gap: 0.5rem;
+
+        font-size: 0.58rem;
+    }
+
+
+    /* Closing */
+
+    .experience-closing {
+        width: 88% !important;
+
+        min-height: 500px;
+
+        padding:
+            6rem 0 !important;
+    }
+
+    .experience-closing h2 {
+        font-size:
+            clamp(
+                4.5rem,
+                16vw,
+                7rem
+            );
+    }
+
+    .closing-description {
+        font-size: 0.95rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* Footer */
+
+    .experience-page .about-footer-inner {
+        width: 88%;
+    }
+
+    .experience-page .about-footer-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 1rem;
+    }
+
+    .experience-page .about-footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 500px) {
+
+    .experience-hero-content h1 {
+        font-size:
+            clamp(
+                4rem,
+                17vw,
+                6rem
+            );
+    }
+
+    .career-intro h2 {
+        font-size:
+            clamp(
+                3.5rem,
+                15vw,
+                5.5rem
+            );
+    }
+
+    .experience-main h2 {
+        font-size:
+            clamp(
+                3.7rem,
+                15vw,
+                5.8rem
+            );
+    }
+
+    .hackathon-content h2 {
+        font-size:
+            clamp(
+                3.5rem,
+                15vw,
+                5.5rem
+            );
+    }
+
+    .experience-tags span {
+        font-size: 0.58rem;
+
+        padding:
+            0.5rem 0.65rem;
+    }
+
+    .hackathon-card {
+        min-height: 320px;
+    }
+
+    .experience-closing h2 {
+        font-size:
+            clamp(
+                4rem,
+                17vw,
+                6rem
+            );
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .experience-hero-content,
+    .career-intro,
+    .experience-main,
+    .hackathon-content,
+    .experience-closing {
+        animation: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}

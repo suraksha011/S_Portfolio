@@ -1,389 +1,524 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suraksha Chaudhary</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+
+<title>Suraksha Chaudhary — Software Engineer</title>
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="mediaqueries.css" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4G5DGQ4BP"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-D4G5DGQ4BP');
+    </script>
+
   </head>
+
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">^_^*</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="site-header">
+
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      s<span>.</span>c
+    </a>
+
+    <div class="nav-links">
+
+      <a href="about.html">about</a>
+
+      <a href="experience.html">experience</a>
+
+      <a
+        href="projects.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        projects ↗
+      </a>
+
+      <a href="skills.html">skills</a>
+
+      <a href="contact.html">contact</a>
+
+    </div>
+
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      available to connect
+    </div>
+
+  </nav>
+
+
+  <!-- MOBILE NAV -->
+
+  <nav class="mobile-navbar">
+
+    <a href="index.html" class="logo">
+      s<span>.</span>c
+    </a>
+
+    <button
+      class="hamburger"
+      type="button"
+      onclick="toggleMenu()"
+      aria-label="Open navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="mobile-menu">
+
+      <a href="about.html" onclick="toggleMenu()">
+        about
+      </a>
+
+      <a href="experience.html" onclick="toggleMenu()">
+        experience
+      </a>
+
+      <a
+        href="projects.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="toggleMenu()"
+      >
+        projects ↗
+      </a>
+
+      <a href="skills.html" onclick="toggleMenu()">
+        skills
+      </a>
+
+      <a href="contact.html" onclick="toggleMenu()">
+        contact
+      </a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+  <section class="hero">
+
+    <!-- Decorative elements -->
+
+    <div class="scribble scribble-one">
+      ✳
+    </div>
+
+    <div class="scribble scribble-two">
+      +
+    </div>
+
+    <div class="floating-note note-one">
+      currently<br />
+      building <span>✦</span>
+    </div>
+
+    <div class="floating-note note-two">
+      curious<br />
+      by default
+    </div>
+
+
+    <div class="hero-content">
+
+      <div class="hero-intro">
+        <span class="eyebrow">
+          SOFTWARE ENGINEER
+        </span>
+
+        <span class="year">
+          / 2026
+        </span>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">^_^*</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Suraksha Chaudhary</h1>
-        <p class="section__text__p2">Senior-year Computer Science Student</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/SurakshaChaudhary_Resume2024.pdf')"
+
+
+      <h1 class="hero-title">
+
+        <span class="title-line">
+          Suraksha
+        </span>
+
+        <span class="title-line title-offset">
+          Chaudhary<span class="title-dot">.</span>
+        </span>
+
+      </h1>
+
+
+      <div class="hero-bottom">
+
+        <p class="hero-description">
+          I build things for the web, solve problems,
+          break things occasionally, and learn how to
+          build them better.
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a href="experience.html" class="funky-link">
+            <span>see what I do</span>
+            <strong>↘</strong>
+          </a>
+
+          <a
+            href="projects.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="funky-link secondary"
           >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/surakshachaudhary/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/suraksha011'"
-          />
-          <img
-            src="./assets/linktree.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://linktr.ee/Suraksha_Chaudhary'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Achievements</h3>
-              <p>Top 10 <br />Microsoft Azure HackAIthon 2023</p>
-              <p>Top 5 <br />Hack Celestia-2023 National level Hackathon </p>
+            <span>things I've built</span>
+            <strong>↗</strong>
+          </a>
 
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Tech <br />Banasthali Vidyapeeth</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-                As a fourth-year Computer Science student, I find myself at the enchanting crossroads of technology and human progress. 
+        </div>
 
-                With a heart captivated by the potential of technology to revolutionize the finance sector, I envision a world where innovative solutions empower individuals to navigate their financial journeys with confidence and clarity. I dream of creating tools that transform how people manage their money, fostering a future where informed decisions pave the path to prosperity.
-                
-                Driven by a passion and a desire, I believe we can craft a brighter tomorrow, harnessing the power of technology to uplift our community and beyond.
-            </p>
-          </div>
-        </div>
       </div>
-      <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      /> -->
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title"></h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Good</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Good</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title"></h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python Libraries</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Data Analytics</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      /> -->
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Beatmaker</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/suraksha011/Beatmaker'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://beatmeso.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Note Maker</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/suraksha011/Note-Making'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://makeitnotes.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Music Player</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/suraksha011/AB_MusicPlayer'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://playmusically.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      /> -->
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:chaudharysuraksha01@gmail.com">chaudharysuraksha01@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/surakshachaudhary/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Achievements</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>By Suraksha Chaudhary.</p>
-    </footer>
-    <script src="script.js"></script>
+
+    </div>
+
+
+    <!-- Big decorative shape -->
+
+    <div class="hero-shape">
+      <span>BUILD</span>
+      <span>THINK</span>
+      <span>REPEAT</span>
+    </div>
+
+  </section>
+
+
+  <!-- ================= QUICK INTRO ================= -->
+
+  <section class="intro-strip">
+
+    <div class="strip-number">
+      01
+    </div>
+
+    <div class="strip-content">
+
+      <p class="strip-label">
+        A quick introduction
+      </p>
+
+      <h2>
+        Engineer by profession.
+        <em>Maker by nature.</em>
+      </h2>
+
+      <p>
+        Currently working in software and spending an
+        unreasonable amount of time thinking about how
+        technology can make everyday things simpler,
+        smarter and more delightful.
+      </p>
+
+    </div>
+
+    <a href="about.html" class="round-arrow">
+      ↗
+    </a>
+
+  </section>
+
+
+  <!-- ================= HIGHLIGHT GRID ================= -->
+
+  <section class="home-grid">
+
+    <div class="grid-heading">
+
+      <span>
+        a few things
+      </span>
+
+      <h2>
+        In my<br />
+        orbit<span>.</span>
+      </h2>
+
+    </div>
+
+
+    <a href="experience.html" class="orbit-card card-yellow">
+
+      <span class="card-label">
+        01 / WORK
+      </span>
+
+      <h3>
+        Building
+        <br />
+        <span>real things.</span>
+      </h3>
+
+      <span class="card-arrow">
+        →
+      </span>
+
+    </a>
+
+
+    <a
+      href="projects.html"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="orbit-card card-pink"
+    >
+
+      <span class="card-label">
+        02 / PROJECTS
+      </span>
+
+      <h3>
+        Ideas that
+        <br />
+        became <span>code.</span>
+      </h3>
+
+      <span class="card-arrow">
+        ↗
+      </span>
+
+    </a>
+
+
+    <a href="skills.html" class="orbit-card card-blue">
+
+      <span class="card-label">
+        03 / TOOLKIT
+      </span>
+
+      <h3>
+        Languages,
+        <br />
+        <span>frameworks & tools.</span>
+      </h3>
+
+      <span class="card-arrow">
+        →
+      </span>
+
+    </a>
+
+
+    <div class="grid-note">
+
+      <span class="handwritten">
+        psst...
+      </span>
+
+      <p>
+        There is more to me than
+        just code.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MORE THAN THIS ================= -->
+
+  <section class="more-than-this">
+
+    <div class="more-decoration">
+      ✦
+    </div>
+
+    <div class="more-content">
+
+      <span class="eyebrow">
+        04 / BEYOND THE RESUME
+      </span>
+
+      <h2>
+        There's
+        <span>more</span>
+        than this.
+      </h2>
+
+      <p>
+        Work is only one chapter.
+        This is where the other little,
+        strange, wonderful pieces of my
+        life live.
+      </p>
+
+      <a
+        href="more-than-this.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="more-button"
+      >
+        <span>
+          enter my other universe
+        </span>
+
+        <strong>
+          ↗
+        </strong>
+      </a>
+
+    </div>
+
+
+    <div class="more-sticker">
+      <span>
+        NOT
+        <br />
+        EVERYTHING
+        <br />
+        IS
+        <br />
+        PRODUCTIVE
+      </span>
+    </div>
+
+  </section>
+
+
+  <!-- ================= RESUME / CONNECT ================= -->
+
+  <section class="connect-section">
+
+    <div class="connect-top">
+
+      <span class="eyebrow">
+        LAST THING
+      </span>
+
+      <span>
+        / let's talk
+      </span>
+
+    </div>
+
+    <h2>
+      Have an idea?
+      <br />
+      A role?
+      <br />
+      <span>Say hi.</span>
+    </h2>
+
+
+    <div class="connect-links">
+
+      <a href="contact.html">
+        <span>Get in touch</span>
+        <strong>↘</strong>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/surakshachaudhary/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>LinkedIn ↗</span>
+        <strong>↗</strong>
+      </a>
+
+      <a
+        href="https://github.com/suraksha011"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>GitHub ↗</span>
+        <strong>↗</strong>
+      </a>
+
+      <a
+        href="./assets/SurakshaChaudhary_Resume2024.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>Resume ↗</span>
+        <strong>↗</strong>
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+
+  <div class="footer-top">
+
+    <a href="index.html" class="footer-logo">
+      s<span>.</span>c
+    </a>
+
+    <p>
+      Designed, coded & slightly overthought by Suraksha.
+    </p>
+
+    <span>
+      © 2026
+    </span>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      Hyderabad · India
+    </span>
+
+    <span>
+      made with curiosity ✦
+    </span>
+
+    <a href="#top">
+      back to top ↑
+    </a>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+```
+
   </body>
 </html>

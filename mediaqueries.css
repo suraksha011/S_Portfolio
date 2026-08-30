@@ -1,103 +1,810 @@
-@media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
+/* =========================================================
+   PROJECT PAGE — LARGE TABLETS / SMALL LAPTOPS
+   ========================================================= */
+
+@media screen and (max-width: 1200px) {
+
+    /* -----------------------------------------------------
+       PROJECT HERO
+       ----------------------------------------------------- */
+
+    .projects-page .projects-hero {
+        width: 90% !important;
+
+        grid-template-columns:
+            60px
+            minmax(0, 1fr)
+            150px !important;
+
+        gap: 2.5rem;
+
+        padding: 5rem 0 !important;
     }
-    .about-containers {
-      flex-wrap: wrap;
+
+    .projects-page .projects-hero-content h1 {
+        font-size:
+            clamp(
+                5.5rem,
+                12vw,
+                8.5rem
+            );
     }
-    #contact,
-    #projects {
-      height: fit-content;
+
+    .projects-page .projects-stamp {
+        width: 145px;
+        height: 145px;
     }
-  }
-  
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
+
+
+    /* -----------------------------------------------------
+       PROJECT INTRO
+       ----------------------------------------------------- */
+
+    .projects-page .projects-intro-section {
+        width: 90% !important;
+
+        grid-template-columns:
+            70px
+            minmax(0, 1fr) !important;
+
+        gap: 3rem;
+
+        padding: 7rem 0 !important;
     }
-    #hamburger-nav {
-      display: flex;
+
+
+    /* -----------------------------------------------------
+       PROJECT FEATURES
+       ----------------------------------------------------- */
+
+    .projects-page .project-feature {
+        width: 90% !important;
+
+        grid-template-columns:
+            110px
+            minmax(0, 1fr) !important;
+
+        gap: 3rem;
+
+        padding: 7rem 0 !important;
     }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
+
+    .projects-page .project-main {
+        max-width: 100%;
     }
-    #profile,
-    .section-container {
-      display: block;
+
+    .projects-page .project-rimorse .project-main,
+    .projects-page .project-breath .project-main,
+    .projects-page .project-ticktask .project-main {
+        padding: 2.5rem;
     }
-    .arrow {
-      display: none;
+
+    .projects-page .project-heading h2 {
+        font-size:
+            clamp(
+                4rem,
+                8vw,
+                7rem
+            );
     }
-    section,
-    .section-container {
-      height: fit-content;
+
+
+    /* -----------------------------------------------------
+       CLOSING
+       ----------------------------------------------------- */
+
+    .projects-page .projects-closing {
+        width: 90% !important;
+
+        padding: 7rem 0 !important;
     }
-    section {
-      margin: 0 5%;
+
+    .projects-page .projects-closing h2 {
+        font-size:
+            clamp(
+                5rem,
+                9vw,
+                8rem
+            );
     }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — TABLET
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .projects-page .about-header {
+        width: 90%;
+
+        padding-left: 0;
+        padding-right: 0;
     }
-    .about-containers {
-      margin-top: 0;
+
+    .projects-page .about-navigation {
+        display: none;
     }
-  }
-  
-  @media screen and (max-width: 600px) {
-    #contact,
-    footer {
-      height: 40vh;
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .projects-page .projects-hero {
+        width: 90% !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            55px
+            minmax(0, 1fr) !important;
+
+        gap: 2rem;
+
+        min-height: auto !important;
+
+        padding:
+            5rem 0 !important;
     }
-    #profile {
-      height: 83vh;
-      margin-bottom: 0;
+
+    .projects-page .projects-stamp {
+        display: none;
     }
-    article {
-      font-size: 1rem;
+
+    .projects-page .projects-hero-content h1 {
+        font-size:
+            clamp(
+                5rem,
+                14vw,
+                8rem
+            );
     }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
+
+    .projects-page .projects-intro {
+        max-width: 35rem;
+
+        font-size: 1rem !important;
     }
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap;
+
+
+    /* -----------------------------------------------------
+       INTRO
+       ----------------------------------------------------- */
+
+    .projects-page .projects-intro-section {
+        width: 90% !important;
+
+        grid-template-columns:
+            60px
+            minmax(0, 1fr) !important;
+
+        gap: 2rem;
+
+        padding: 6rem 0 !important;
     }
-    .contact-info-container {
-      margin: 0;
+
+    .projects-page .projects-intro-content h2 {
+        font-size:
+            clamp(
+                4rem,
+                10vw,
+                6.5rem
+            );
     }
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
+
+
+    /* -----------------------------------------------------
+       PROJECT FEATURES
+       ----------------------------------------------------- */
+
+    .projects-page .project-feature {
+        width: 90% !important;
+
+        grid-template-columns:
+            80px
+            minmax(0, 1fr) !important;
+
+        gap: 2rem;
+
+        padding: 6rem 0 !important;
     }
-    .experience-sub-title {
-      font-size: 1.25rem;
+
+    .projects-page .project-number span {
+        font-size: 1.5rem;
     }
-    .logo {
-      font-size: 1.5rem;
+
+    .projects-page .project-heading h2 {
+        font-size:
+            clamp(
+                4rem,
+                10vw,
+                7rem
+            );
     }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
+
+
+    /* -----------------------------------------------------
+       COLORFUL PROJECT CARDS
+       ----------------------------------------------------- */
+
+    .projects-page .project-rimorse .project-main,
+    .projects-page .project-breath .project-main,
+    .projects-page .project-ticktask .project-main {
+        padding: 2.5rem;
     }
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
+
+
+    /* Keep the decorative words subtle */
+
+    .projects-page .project-rimorse .project-main::after,
+    .projects-page .project-breath .project-main::after,
+    .projects-page .project-ticktask .project-main::after {
+        opacity: 0.25;
     }
-    .section__text__p2 {
-      font-size: 1.25rem;
+
+
+    /* -----------------------------------------------------
+       PROJECT DESCRIPTION
+       ----------------------------------------------------- */
+
+    .projects-page .project-description {
+        max-width: 100%;
+
+        margin-top: 2.5rem;
     }
-    .title {
-      font-size: 2rem;
+
+    .projects-page .project-description p {
+        font-size: 1rem !important;
+
+        line-height: 1.8 !important;
     }
-    .text-container {
-      text-align: justify;
+
+
+    /* -----------------------------------------------------
+       HIGHLIGHT
+       ----------------------------------------------------- */
+
+    .projects-page .project-highlight {
+        width: 100%;
+
+        grid-template-columns:
+            130px
+            minmax(0, 1fr);
     }
-  }
+
+
+    /* -----------------------------------------------------
+       CLOSING
+       ----------------------------------------------------- */
+
+    .projects-page .projects-closing {
+        width: 90% !important;
+
+        min-height: 550px;
+
+        padding: 7rem 0 !important;
+    }
+}
+
+
+/* =========================================================
+   PROJECT PAGE — MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* -----------------------------------------------------
+       PAGE
+       ----------------------------------------------------- */
+
+    .projects-page {
+        overflow-x: hidden;
+    }
+
+    .projects-page::before {
+        inset: 7px;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .projects-page .about-header {
+        width: 88%;
+
+        height: 100px;
+
+        padding-top: 15px;
+    }
+
+    .projects-page .about-logo {
+        width: 48px;
+        height: 48px;
+
+        font-size: 1rem;
+    }
+
+    .projects-page .about-header-title,
+    .projects-page .about-navigation {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .projects-page .projects-hero {
+        width: 88% !important;
+
+        display: block !important;
+
+        padding:
+            4.5rem 0
+            5rem !important;
+    }
+
+    .projects-page .projects-index {
+        display: none;
+    }
+
+    .projects-page .projects-hero-content {
+        width: 100%;
+    }
+
+    .projects-page .projects-eyebrow {
+        font-size: 0.62rem !important;
+
+        letter-spacing: 0.12em;
+    }
+
+    .projects-page .projects-hero-content h1 {
+        font-size:
+            clamp(
+                4rem,
+                18vw,
+                6.5rem
+            );
+
+        line-height: 0.83;
+
+        letter-spacing: -0.075em;
+    }
+
+    .projects-page .projects-intro {
+        max-width: 100%;
+
+        margin-top: 2.8rem;
+
+        font-size: 0.95rem !important;
+
+        line-height: 1.75 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       INTRO SECTION
+       ----------------------------------------------------- */
+
+    .projects-page .projects-intro-section {
+        width: 88% !important;
+
+        display: block !important;
+
+        padding:
+            5rem 0 !important;
+    }
+
+    .projects-page .projects-section-label {
+        margin-bottom: 2.5rem;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 1rem;
+    }
+
+    .projects-page .projects-section-label small {
+        writing-mode: initial;
+    }
+
+    .projects-page .projects-intro-content h2 {
+        font-size:
+            clamp(
+                3.4rem,
+                14vw,
+                5.5rem
+            );
+
+        line-height: 0.86;
+    }
+
+    .projects-page .projects-intro-content > p:not(.projects-kicker) {
+        font-size: 0.92rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT FEATURE
+       ----------------------------------------------------- */
+
+    .projects-page .project-feature {
+        width: 88% !important;
+
+        display: block !important;
+
+        padding:
+            5rem 0 !important;
+    }
+
+
+    /* Project number becomes horizontal */
+
+    .projects-page .project-number {
+        margin-bottom: 2.5rem;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 1rem;
+    }
+
+    .projects-page .project-number span {
+        font-size: 1.2rem;
+    }
+
+    .projects-page .project-number small {
+        writing-mode: initial;
+
+        font-size: 0.58rem;
+    }
+
+
+    /* -----------------------------------------------------
+       COLORFUL CARDS
+       ----------------------------------------------------- */
+
+    .projects-page .project-rimorse .project-main,
+    .projects-page .project-breath .project-main,
+    .projects-page .project-ticktask .project-main {
+        padding: 1.5rem;
+
+        transform: none;
+    }
+
+
+    /* Slightly different mobile card shapes */
+
+    .projects-page .project-rimorse .project-main {
+        background:
+            linear-gradient(
+                135deg,
+                var(--peach),
+                #f0b99d
+            );
+    }
+
+    .projects-page .project-breath .project-main {
+        background:
+            linear-gradient(
+                135deg,
+                var(--lavender),
+                #a7bde0
+            );
+    }
+
+    .projects-page .project-ticktask .project-main {
+        background:
+            linear-gradient(
+                135deg,
+                var(--sage),
+                #c6d3a5
+            );
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT TITLES
+       ----------------------------------------------------- */
+
+    .projects-page .project-heading h2 {
+        font-size:
+            clamp(
+                3.5rem,
+                15vw,
+                5.8rem
+            );
+
+        line-height: 0.84;
+    }
+
+    .projects-page .project-kicker {
+        font-size: 0.6rem !important;
+
+        letter-spacing: 0.08em;
+    }
+
+    .projects-page .project-type {
+        font-size: 0.58rem !important;
+
+        line-height: 1.5 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       DECORATIVE WORDS
+       ----------------------------------------------------- */
+
+    .projects-page .project-rimorse .project-main::after {
+        font-size: 2.8rem;
+
+        right: 1rem;
+        top: 1rem;
+
+        opacity: 0.3;
+    }
+
+    .projects-page .project-breath .project-main::after {
+        font-size: 2.8rem;
+
+        right: 1rem;
+        top: 1.5rem;
+
+        opacity: 0.25;
+    }
+
+    .projects-page .project-ticktask .project-main::after {
+        font-size: 7rem;
+
+        right: 0.5rem;
+        top: 0;
+
+        opacity: 0.2;
+    }
+
+
+    /* -----------------------------------------------------
+       DESCRIPTION
+       ----------------------------------------------------- */
+
+    .projects-page .project-description {
+        margin-top: 2rem;
+    }
+
+    .projects-page .project-description p {
+        font-size: 0.92rem !important;
+
+        line-height: 1.8 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       TECHNOLOGY TAGS
+       ----------------------------------------------------- */
+
+    .projects-page .project-tech {
+        margin-top: 2rem;
+
+        gap: 0.5rem;
+    }
+
+    .projects-page .project-tech span {
+        padding:
+            0.45rem 0.55rem;
+
+        font-size: 0.54rem;
+
+        background:
+            rgba(
+                255,
+                253,
+                248,
+                0.65
+            );
+    }
+
+
+    /* -----------------------------------------------------
+       HIGHLIGHT
+       ----------------------------------------------------- */
+
+    .projects-page .project-highlight {
+        width: 100%;
+
+        margin-top: 2.3rem;
+
+        padding:
+            1.1rem 1rem;
+
+        display: block;
+
+        border-left-width: 3px;
+    }
+
+    .projects-page .project-highlight span {
+        display: block;
+
+        margin-bottom: 0.6rem;
+
+        font-size: 1.25rem;
+    }
+
+    .projects-page .project-highlight p {
+        font-size: 0.84rem !important;
+
+        line-height: 1.6 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       BUTTONS
+       ----------------------------------------------------- */
+
+    .projects-page .project-actions {
+        margin-top: 2rem;
+
+        display: flex;
+
+        gap: 0.6rem;
+    }
+
+    .projects-page .project-actions a {
+        flex: 1;
+
+        min-width: 0;
+
+        padding:
+            0.8rem 0.75rem;
+
+        font-size: 0.58rem;
+
+        gap: 0.5rem;
+    }
+
+
+    /* -----------------------------------------------------
+       CLOSING
+       ----------------------------------------------------- */
+
+    .projects-page .projects-closing {
+        width: 88% !important;
+
+        min-height: 500px;
+
+        padding:
+            6rem 0 !important;
+    }
+
+    .projects-page .projects-closing > p:first-child {
+        font-size: 0.62rem;
+    }
+
+    .projects-page .projects-closing h2 {
+        font-size:
+            clamp(
+                3.8rem,
+                16vw,
+                6rem
+            );
+
+        line-height: 0.84;
+    }
+
+    .projects-page .projects-closing-description {
+        margin-top: 2.5rem;
+
+        font-size: 0.92rem !important;
+
+        line-height: 1.8 !important;
+    }
+
+    .projects-page .projects-closing > a {
+        width: 100%;
+
+        max-width: 240px;
+
+        padding:
+            1rem;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    .projects-page .about-footer {
+        padding:
+            2.5rem 0 1.5rem;
+    }
+
+    .projects-page .about-footer-inner {
+        width: 88%;
+    }
+
+    .projects-page .about-footer-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
+
+    .projects-page .about-footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0.75rem;
+
+        margin-top: 3rem;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .projects-page .projects-hero-content h1 {
+        font-size: 3.7rem;
+    }
+
+    .projects-page .projects-intro-content h2 {
+        font-size: 3.3rem;
+    }
+
+    .projects-page .project-heading h2 {
+        font-size: 3.4rem;
+    }
+
+    .projects-page .projects-closing h2 {
+        font-size: 3.5rem;
+    }
+
+    .projects-page .project-rimorse .project-main,
+    .projects-page .project-breath .project-main,
+    .projects-page .project-ticktask .project-main {
+        padding: 1.25rem;
+    }
+
+    .projects-page .project-actions a {
+        font-size: 0.53rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .projects-page *,
+    .projects-page *::before,
+    .projects-page *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
